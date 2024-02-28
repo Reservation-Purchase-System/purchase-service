@@ -12,13 +12,13 @@ public interface StockClient {
   /**
    * stock_service에 재고 감소 요청
    */
-  @RequestMapping(method = RequestMethod.POST, value = "/api/v1/internal/stocks/decrease", consumes = "application/json")
+  @RequestMapping(method = RequestMethod.PUT, value = "/api/v1/internal/stocks/decrease", consumes = "application/json")
   void decreaseProductStock(@RequestParam(name = "id") Long productId, @RequestParam(name = "quantity") Integer quantity);
 
   /**
    * stock_service에 재고 증가 요청
    */
-  @RequestMapping(method = RequestMethod.POST, value = "/api/v1/internal/stocks/increase", consumes = "application/json")
+  @RequestMapping(method = RequestMethod.PUT, value = "/api/v1/internal/stocks/increase", consumes = "application/json")
   void increaseProductStock(@RequestParam(name = "id") Long productId, @RequestParam(name = "quantity") Integer quantity);
 
 
